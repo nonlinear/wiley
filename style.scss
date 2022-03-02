@@ -1,0 +1,59 @@
+@import "functions.scss";
+@import "mixins.scss";
+
+
+@include font-face(OpenSans, 
+	$path: "fonts/", 
+	$file: OpenSans-Regular, 
+	$weight: normal, 
+	$style: normal, 
+	$stretch: normal, 
+	$transform: normal
+	);
+@include font-face(OpenSans, 
+	$path: "fonts/", 
+	$file: OpenSans-SemiBold, 
+	$weight: bold, 
+	$style: normal, 
+	$stretch: normal, 
+	$transform: normal
+	);
+
+body {
+	font-family: OpenSans;
+font-size: 14px;
+text-align: left;
+line-height: 125%;
+}
+
+h2 {
+	font-size: 30px;
+	color: #005274;
+	margin-top: 60px;
+	font-weight: normal;
+}
+.background, header.header, .fixed {
+	displaY: none;
+}
+a {
+	color: #005274;
+	&:hover {
+		color: #2B7999;
+	}
+}
+
+td, th {
+	vertical-align: top;
+	padding-top: 15px;
+	padding-right: 30px;
+	word-break: break-word;
+	&.title {
+		word-break: break-all;
+	}
+	&.size {
+		word-break: keep-all;
+	}
+	&.designation {
+		width: 230px;
+	}
+}
