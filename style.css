@@ -106,20 +106,38 @@ a:hover {
   color: #2B7999;
 }
 
+table {
+  margin-bottom: 60px;
+}
+table.smaller {
+  width: 70%;
+}
+table.smallest {
+  width: 50%;
+}
+
 td, th {
   vertical-align: top;
   padding-top: 15px;
   padding-right: 30px;
   word-break: break-word;
 }
-td.title, th.title {
+td.filename, th.filename {
   word-break: break-all;
 }
-td.size, th.size {
+td.size, td.title, th.size, th.title {
   word-break: keep-all;
 }
-td.designation, th.designation {
-  width: 230px;
+
+.orcid {
+  background-image: url(orcidid.svg);
+  background-repeat: no-repeat;
+  padding-left: 31px;
+}
+
+div.name {
+  font-weight: bold;
+  display: inline-block;
 }
 
 /*# sourceMappingURL=style.css.map */
