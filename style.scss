@@ -52,6 +52,9 @@ a {
 table {
 	margin-bottom: 60px;
 }
+tr:odd {
+	background-color: #eee;
+}
 
 td, th {
 	vertical-align: top;
@@ -60,17 +63,26 @@ td, th {
 	word-break: break-word;
 	&.filename {
 		word-break: break-all;
+		max-width: 350px;
 	}
 	&.size, &.title {
 		word-break: keep-all;
 	}
+	&.roles {
+		max-width: 250px;
+	}
 
+
+}
+sup {
+	white-space: nowrap;
 }
 .orcid {
 	background-image: url(orcidid.svg);
 	background-repeat: no-repeat;
 	padding-left: 31px;
 	display: block;
+	word-break: keep-all;
 }
 div {
 	&.name {

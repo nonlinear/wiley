@@ -111,6 +111,10 @@ table {
   margin-bottom: 60px;
 }
 
+tr:odd {
+  background-color: #eee;
+}
+
 td, th {
   vertical-align: top;
   padding-top: 15px;
@@ -119,9 +123,17 @@ td, th {
 }
 td.filename, th.filename {
   word-break: break-all;
+  max-width: 350px;
 }
 td.size, td.title, th.size, th.title {
   word-break: keep-all;
+}
+td.roles, th.roles {
+  max-width: 250px;
+}
+
+sup {
+  white-space: nowrap;
 }
 
 .orcid {
@@ -129,6 +141,7 @@ td.size, td.title, th.size, th.title {
   background-repeat: no-repeat;
   padding-left: 31px;
   display: block;
+  word-break: keep-all;
 }
 
 div.name {
