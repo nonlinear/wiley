@@ -77,7 +77,8 @@
   }
 }
 .container {
-  width: 1140px;
+  max-width: 1140px;
+  width: 100%;
   margin: 30px auto;
 }
 
@@ -109,12 +110,6 @@ a:hover {
 table {
   margin-bottom: 60px;
 }
-table.smaller {
-  width: 70%;
-}
-table.smallest {
-  width: 50%;
-}
 
 td, th {
   vertical-align: top;
@@ -133,11 +128,86 @@ td.size, td.title, th.size, th.title {
   background-image: url(orcidid.svg);
   background-repeat: no-repeat;
   padding-left: 31px;
+  display: block;
 }
 
 div.name {
   font-weight: bold;
   display: inline-block;
+}
+
+@media (min-width: 600px) {
+  table.smaller {
+    width: 70%;
+  }
+  table.smallest {
+    width: 50%;
+  }
+}
+@media (max-width: 600px) {
+  table {
+    width: 100%;
+  }
+
+  tr.header {
+    display: none;
+  }
+
+  div.name {
+    font-weight: normal;
+  }
+
+  td {
+    display: block;
+    border: solid 1px #ccc;
+    padding: 15px;
+    background-color: #fff;
+  }
+  td:not(:first-of-type) {
+    border-top: none;
+    padding-top: 10px;
+  }
+  td:not(:last-of-type) {
+    border-bottom: none;
+    padding-bottom: 0px;
+  }
+  td:last-of-type {
+    margin-bottom: -3px;
+  }
+  td:before {
+    font-weight: bold;
+    display: block;
+  }
+  td.title:before {
+    content: "Title";
+  }
+  td.name:before {
+    content: "Name";
+  }
+  td.email:before {
+    content: "Email";
+  }
+  td.country:before {
+    content: "Country";
+  }
+  td.roles:before {
+    content: "Roles";
+  }
+  td.filename:before {
+    content: "Name";
+  }
+  td.designation:before {
+    content: "Type of File";
+  }
+  td.size:before {
+    content: "Size";
+  }
+  td.designation:before {
+    content: "Type of File";
+  }
+  td.size:before {
+    content: "Size";
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
